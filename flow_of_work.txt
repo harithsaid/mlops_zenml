@@ -1,0 +1,35 @@
+create the folders
+1. steps-> to store the steps(functions of your model as a separate file)
+2. pipelines -> to run the steps python files
+3. data -> to store the data used by model
+4.saved_models -> to store models that you saved_models
+5.src ->
+
+
+create python files
+1. run_pipeline -> to run the whole project
+2. __init__.py ->
+
+
+inside steps folder, create python files
+
+1. Ingest_data.py -> to take care of data consumption
+2. clean_data.py -> to take care of data cleaning
+3. train_model.py -> to take care of training the model
+4. evaluate_model.py -> to take care of model evaluation
+
+inside the pipelines folder, create python files
+
+1. train_pipeline.py -> it imports all the python files from steps folder and puts them in a pipeline for execution
+-> after this step, you can import the contents of this file to the run_pipeline.py file and then run the python file in terminal.
+
+-> once the pipelines finish executing, run "zenml login --local --blocking" on the terminal.
+
+-> go to the url and view you pipeline
+
+
+--------------------------this is basically the setup.... which one can build on-------------------------------------------------------
+
+1. the real information on your specific project can be filled in python files in src folder which are then integrated to the files in steps folder
+
+
